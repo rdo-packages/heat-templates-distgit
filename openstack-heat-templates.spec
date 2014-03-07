@@ -1,6 +1,6 @@
-%global commit 3754320f2bd1910f0e2470fdfdbca5f4113a46c4
+%global commit e19e827ddfcc174dd0821f54d6af036e0a330e1e
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global alphatag 20140106git
+%global alphatag 20140307git
 
 Name: openstack-heat-templates
 Version: 0
@@ -47,6 +47,9 @@ cp -aR openshift-enterprise %{buildroot}%{_datadir}/%{name}/openshift-enterprise
 %{_datadir}/%{name}
 
 %changelog
+* Fri Mar 7 2014 Jeff Peeler <jpeeler@redhat.com> 0-0.1.20140307git
+- Rebase to e19e827ddfcc174dd0821f54d6af036e0a330e1e
+
 * Mon Jan 6 2014 Steven Dake <sdake@redhat.com> 0-0.1.20140106git
 - Improvements based upon review comments
 
