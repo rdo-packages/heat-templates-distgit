@@ -32,6 +32,7 @@ Heat example templates and image building elements
 mkdir -p %{buildroot}%{_bindir}
 mkdir -p %{buildroot}%{_datadir}/%{name}
 rm -f tools/fetch-cloudformation-examples
+rm -f tools/validate-templates
 cp -aR tools/* %{buildroot}%{_bindir}
 cp -aR cfn %{buildroot}%{_datadir}/%{name}
 cp -aR hot %{buildroot}%{_datadir}/%{name}
