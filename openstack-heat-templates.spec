@@ -4,7 +4,7 @@
 
 Name: openstack-heat-templates
 Version: 0
-Release: 0.1.%{alphatag}%{?dist}
+Release: 0.2.%{alphatag}%{?dist}
 Summary: Heat example templates and DIB elements
 Group: System Environment/Base
 License: ASL 2.0
@@ -48,6 +48,9 @@ cp -aR openshift-enterprise %{buildroot}%{_datadir}/%{name}/openshift-enterprise
 %{_datadir}/%{name}
 
 %changelog
+* Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0-0.2.20140407git
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
+
 * Mon Apr  7 2014 Jeff Peeler <jpeeler@redhat.com> 0-0.1.20140407git
 - Rebase to 65a4f8bebc72da71c616e2e378b7b1ac354db1a3
 
