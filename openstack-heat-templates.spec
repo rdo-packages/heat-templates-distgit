@@ -1,27 +1,20 @@
-%global commit 65a4f8bebc72da71c616e2e378b7b1ac354db1a3
+%global commit 5eb75ccc5132b6e4e0af05ec9d30e287311901ff
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global alphatag 20140407git
+%global alphatag 20141111git
 
 Name: openstack-heat-templates
 Version: 0
 Release: 0.2.%{alphatag}%{?dist}
-Summary: Heat example templates and DIB elements
+Summary: Heat software config templates and DIB elements
 Group: System Environment/Base
 License: ASL 2.0
 URL: https://github.com/openstack/heat-templates
 Source0: https://github.com/openstack/heat-templates/archive/%{commit}/heat-templates-%{commit}.tar.gz
-Requires: openstack-heat-common
-Requires: oz
-Requires: qemu-img
-Requires: openstack-glance
-Requires: diskimage-builder
-Requires: libvirt-daemon
-Obsoletes: heat-jeos <= 9-1
 
 BuildArch: noarch
 
 %description
-Heat example templates and image building elements
+Heat software config templates and image building elements
 
 %prep
 %setup -qn heat-templates-%{commit}
@@ -29,25 +22,19 @@ Heat example templates and image building elements
 %build
 
 %install
-mkdir -p %{buildroot}%{_bindir}
 mkdir -p %{buildroot}%{_datadir}/%{name}
-rm -f tools/fetch-cloudformation-examples
-rm -f tools/validate-templates
-cp -aR tools/* %{buildroot}%{_bindir}
-cp -aR cfn %{buildroot}%{_datadir}/%{name}
-cp -aR hot %{buildroot}%{_datadir}/%{name}
-cp -aR jeos %{buildroot}%{_datadir}/%{name}
-cp -aR  openshift-origin %{buildroot}%{_datadir}/%{name}/openshift-origin
-cp -aR openshift-enterprise %{buildroot}%{_datadir}/%{name}/openshift-enterprise
-
+cp -aR hot/software-config %{buildroot}%{_datadir}/%{name}
 
 %files
 %doc LICENSE README.rst
-%{_bindir}/heat-jeos.sh
-%{_bindir}/cfn-json2yaml
 %{_datadir}/%{name}
 
 %changelog
+* Tue Nov 11 2014 Jeff Peeler <jpeeler@redhat.com> 0-0.2.20141111git
+- Rebase to 5eb75ccc5132b6e4e0af05ec9d30e287311901ff
+- Removed everything except software-config
+- Removed unnecessary requires and obsoletes
+
 * Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0-0.2.20140407git
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
 
