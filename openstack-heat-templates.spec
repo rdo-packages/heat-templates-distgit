@@ -3,8 +3,8 @@
 %global alphatag 20141111git
 
 Name: openstack-heat-templates
-Version: 0
-Release: 0.2.%{alphatag}%{?dist}
+Version: XXX
+Release: XXX%{?dist}
 Summary: Heat software config templates and DIB elements
 Group: System Environment/Base
 License: ASL 2.0
@@ -17,7 +17,7 @@ BuildArch: noarch
 Heat software config templates and image building elements
 
 %prep
-%setup -qn heat-templates-%{commit}
+%setup -qn heat-templates-%{upstream_version}
 
 %build
 
