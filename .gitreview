@@ -1,5 +1,5 @@
 [gerrit]
-host=review.gerrithub.io
+host=review.rdoproject.org
 port=29418
-project=openstack-packages/heat-templates
+project=openstack/heat-templates-distgit
 defaultbranch=rpm-master
