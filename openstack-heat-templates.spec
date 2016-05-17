@@ -1,6 +1,5 @@
 %global commit 5eb75ccc5132b6e4e0af05ec9d30e287311901ff
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global alphatag 20141111git
 %global project heat-templates
 
 Name: openstack-heat-templates
