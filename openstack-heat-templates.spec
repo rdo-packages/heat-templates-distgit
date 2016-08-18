@@ -1,4 +1,4 @@
-%global commit 96a0b0b3d2af2dbb266d1048360ab6992dc3ca3e
+%global commit b5e110ea90ebdcb75ec4beb954a918fb6d842ca4
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 %global alphatag .%{shortcommit}git
 %global project heat-templates
