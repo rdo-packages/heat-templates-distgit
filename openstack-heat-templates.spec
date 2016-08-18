@@ -1,4 +1,4 @@
-%global commit 5eb75ccc5132b6e4e0af05ec9d30e287311901ff
+%global commit b5e110ea90ebdcb75ec4beb954a918fb6d842ca4
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 %global project heat-templates
 
