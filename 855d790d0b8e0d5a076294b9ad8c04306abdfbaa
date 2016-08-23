@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_2cc112e5",
+        "filename": "openstack-heat-templates.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 102
+      },
+      "writtenOn": "2016-08-23T01:24:00Z",
+      "side": 1,
+      "message": "Might be nice to eventually have websocketclient in the list here too for Zaqar websockets but that can wait for now.",
+      "revId": "855d790d0b8e0d5a076294b9ad8c04306abdfbaa",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
