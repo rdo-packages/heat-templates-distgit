@@ -40,6 +40,9 @@ install -p -D -m 755 hot/software-config/elements/heat-config/os-refresh-config/
 # hook to perform configuration with scripts
 install -p -D -m 755 hot/software-config/elements/heat-config-script/install.d/hook-script.py %{buildroot}%{_libexecdir}/heat-config/hooks/script
 
+# hook to perform configuration with puppet
+install -p -D -m 755 hot/software-config/elements/heat-config-puppet/install.d/hook-puppet.py %{buildroot}%{_libexecdir}/heat-config/hooks/puppet
+
 %files
 %license LICENSE
 %doc README.rst
@@ -68,5 +71,18 @@ deployments to perform script based configuration tasks.
 %{_libexecdir}/os-refresh-config/configure.d/20-os-apply-config
 %{_libexecdir}/os-refresh-config/configure.d/55-heat-config
 %{_libexecdir}/heat-config/hooks/script
+
+%package -n python-heat-agent-puppet
+Summary: Agent for performing Puppet based Heat software deployments
+Requires: python-heat-agent
+Requires: puppet
+
+%description -n python-heat-agent-puppet
+This package installs and configures os-collect-config to allow Heat software
+deployments to perform puppet based configuration tasks.
+
+%files -n python-heat-agent-puppet
+%license LICENSE
+%{_libexecdir}/heat-config/hooks/puppet
 
 %changelog
