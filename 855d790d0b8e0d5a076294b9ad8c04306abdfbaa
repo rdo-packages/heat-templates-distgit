@@ -16,6 +16,24 @@
       "revId": "855d790d0b8e0d5a076294b9ad8c04306abdfbaa",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_6cbb0a73",
+        "filename": "openstack-heat-templates.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 147
+      },
+      "writtenOn": "2016-08-23T02:45:10Z",
+      "side": 1,
+      "message": "Should that be an os-collect-config dependency instead? I just did this but let me know if I missed anything https://review.rdoproject.org/r/#/c/1885/",
+      "parentUuid": "1a106d94_2cc112e5",
+      "revId": "855d790d0b8e0d5a076294b9ad8c04306abdfbaa",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
