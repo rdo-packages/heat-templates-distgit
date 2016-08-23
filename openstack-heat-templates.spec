@@ -43,6 +43,9 @@ install -p -D -m 755 hot/software-config/elements/heat-config-script/install.d/h
 # hook to perform configuration with puppet
 install -p -D -m 755 hot/software-config/elements/heat-config-puppet/install.d/hook-puppet.py %{buildroot}%{_libexecdir}/heat-config/hooks/puppet
 
+# hook to perform configuration with ansible
+install -p -D -m 755 hot/software-config/elements/heat-config-ansible/install.d/hook-ansible.py %{buildroot}%{_libexecdir}/heat-config/hooks/ansible
+
 %files
 %license LICENSE
 %doc README.rst
@@ -85,4 +88,16 @@ deployments to perform puppet based configuration tasks.
 %license LICENSE
 %{_libexecdir}/heat-config/hooks/puppet
 
+%package -n python-heat-agent-ansible
+Summary: Agent for performing Ansible based Heat software deployments
+Requires: python-heat-agent
+Requires: ansible
+
+%description -n python-heat-agent-ansible
+This package installs and configures os-collect-config to allow Heat software
+deployments to perform ansible based configuration tasks.
+
+%files -n python-heat-agent-ansible
+%license LICENSE
+%{_libexecdir}/heat-config/hooks/ansible
 %changelog
