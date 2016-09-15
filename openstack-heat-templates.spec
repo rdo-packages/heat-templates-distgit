@@ -1,12 +1,12 @@
 %global commit b5e110ea90ebdcb75ec4beb954a918fb6d842ca4
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global alphatag .%{shortcommit}git
+%global alphatag .%{shortcommit}git.1
 %global project heat-templates
 
 
 Name: openstack-heat-templates
 Version: 0
-Release: 0.3%{alphatag}%{?dist}
+Release: 0.4%{alphatag}%{?dist}
 Summary: Heat software config templates and DIB elements
 License: ASL 2.0
 URL: https://github.com/openstack/heat-templates
@@ -32,6 +32,9 @@ cp -aR hot/software-config %{buildroot}%{_datadir}/%{name}
 %{_datadir}/%{name}
 
 %changelog
+* Thu Sep 15 2016 Haïkel Guémar <hguemar@fedoraproject.org> - 0-0.3.b5e110egit.1
+- Security bug fix
+
 * Fri Apr  1 2016 Haïkel Guémar <hguemar@fedoraproject.org> - 0-0.3.96a0b0bgit
 - Mitaka RC1 release
 
