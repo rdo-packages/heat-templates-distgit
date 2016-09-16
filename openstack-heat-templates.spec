@@ -1,4 +1,4 @@
-%global commit b5e110ea90ebdcb75ec4beb954a918fb6d842ca4
+%global commit 1e6015d4b223dbf4991e6496090392e07fd39f2b
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # DO NOT REMOVE ALPHATAG
 %global alphatag .%{shortcommit}git
@@ -103,6 +103,6 @@ deployments to perform ansible based configuration tasks.
 %license LICENSE
 %{_libexecdir}/heat-config/hooks/ansible
 %changelog
-* Fri Sep 16 2016 Haïkel Guémar <hguemar@fedoraproject.org> - 0-0.5.b5e110egit
+* Fri Sep 16 2016 Haïkel Guémar <hguemar@fedoraproject.org> - 0-0.5.1e6015dgit
 - Newton version
 
