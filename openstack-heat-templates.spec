@@ -5,8 +5,8 @@
 %global project heat-templates
 
 Name: openstack-heat-templates
-Version: XXX
-Release: XXX
+Version: 0
+Release: 0.5%{alphatag}%{?dist}
 Summary: Heat software config templates and DIB elements
 License: ASL 2.0
 URL: https://github.com/openstack/heat-templates
@@ -18,7 +18,7 @@ BuildArch: noarch
 Heat software config templates and image building elements
 
 %prep
-%setup -qn %{project}-%{upstream_version}
+%setup -qn %{project}-%{commit}
 
 %build
 
@@ -103,3 +103,6 @@ deployments to perform ansible based configuration tasks.
 %license LICENSE
 %{_libexecdir}/heat-config/hooks/ansible
 %changelog
+* Fri Sep 16 2016 Haïkel Guémar <hguemar@fedoraproject.org> - 0-0.5.b5e110egit
+- Newton version
+
