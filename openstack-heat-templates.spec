@@ -1,5 +1,7 @@
 %global commit b5e110ea90ebdcb75ec4beb954a918fb6d842ca4
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
+# DO NOT REMOVE ALPHATAG
+%global alphatag .%{shortcommit}git
 %global project heat-templates
 
 Name: openstack-heat-templates
