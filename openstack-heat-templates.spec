@@ -106,3 +106,4 @@ deployments to perform ansible based configuration tasks.
 * Fri Sep 16 2016 Haïkel Guémar <hguemar@fedoraproject.org> - 0-0.5.1e6015dgit
 - Newton version
 
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/heat-templates/commit/?id=f123aa14919ca7ce24540ff861ea48c0b0bfd305
