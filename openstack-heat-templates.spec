@@ -1,3 +1,4 @@
+%{!?upstream_version: %global upstream_version %{commit}}
 %global commit 1e6015d4b223dbf4991e6496090392e07fd39f2b
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # DO NOT REMOVE ALPHATAG
@@ -18,7 +19,7 @@ BuildArch: noarch
 Heat software config templates and image building elements
 
 %prep
-%setup -qn %{project}-%{commit}
+%setup -qn %{project}-%{upstream_version}
 
 %build
 
