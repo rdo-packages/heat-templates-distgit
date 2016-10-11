@@ -51,6 +51,9 @@ install -p -D -m 755 hot/software-config/elements/heat-config-ansible/install.d/
 # hook to perform configuration with os-apply-config
 install -p -D -m 755 hot/software-config/elements/heat-config-apply-config/install.d/hook-apply-config.py %{buildroot}%{_libexecdir}/heat-config/hooks/apply-config
 
+# hook to perform configuration with hiera
+install -p -D -m 755 hot/software-config/elements/heat-config-hiera/install.d/hook-hiera.py %{buildroot}%{_libexecdir}/heat-config/hooks/hiera
+
 %files
 %license LICENSE
 %doc README.rst
@@ -119,3 +122,15 @@ deployments to perform os-apply-config based configuration tasks.
 %files -n python-heat-agent-apply-config
 %license LICENSE
 %{_libexecdir}/heat-config/hooks/apply-config
+
+%package -n python-heat-agent-hiera
+Summary: Agent for performing hiera based Heat software deployments
+Requires: python-heat-agent
+
+%description -n python-heat-agent-hiera
+This package installs and configures os-collect-config to allow Heat software
+deployments to perform hiera based configuration tasks.
+
+%files -n python-heat-agent-hiera
+%license LICENSE
+%{_libexecdir}/heat-config/hooks/hiera
