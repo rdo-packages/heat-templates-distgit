@@ -54,6 +54,10 @@ install -p -D -m 755 hot/software-config/elements/heat-config-apply-config/insta
 # hook to perform configuration with hiera
 install -p -D -m 755 hot/software-config/elements/heat-config-hiera/install.d/hook-hiera.py %{buildroot}%{_libexecdir}/heat-config/hooks/hiera
 
+# hook to perform configuration with docker commands
+install -p -D -m 755 hot/software-config/elements/heat-config-docker-cmd/os-refresh-config/configure.d/50-heat-config-docker-cmd %{buildroot}%{_libexecdir}/os-refresh-config/configure.d/50-heat-config-docker-cmd
+install -p -D -m 755 hot/software-config/elements/heat-config-docker-cmd/install.d/hook-docker-cmd.py %{buildroot}%{_libexecdir}/heat-config/hooks/docker-cmd
+
 %files
 %license LICENSE
 %doc README.rst
@@ -133,5 +137,19 @@ deployments to perform hiera based configuration tasks.
 %files -n python-heat-agent-hiera
 %license LICENSE
 %{_libexecdir}/heat-config/hooks/hiera
+
+%package -n python-heat-agent-docker-cmd
+Summary: Agent for performing Docker based Heat software deployments
+Requires: python-heat-agent
+Requires: docker
+
+%description -n python-heat-agent-docker-cmd
+This package installs and configures os-collect-config to allow Heat software
+deployments to perform docker based configuration tasks.
+
+%files -n python-heat-agent-docker-cmd
+%license LICENSE
+%{_libexecdir}/heat-config/hooks/docker-cmd
+%{_libexecdir}/os-refresh-config/configure.d/50-heat-config-docker-cmd
 
 %changelog
