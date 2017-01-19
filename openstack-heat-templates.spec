@@ -58,6 +58,9 @@ install -p -D -m 755 hot/software-config/elements/heat-config-hiera/install.d/ho
 install -p -D -m 755 hot/software-config/elements/heat-config-docker-cmd/os-refresh-config/configure.d/50-heat-config-docker-cmd %{buildroot}%{_libexecdir}/os-refresh-config/configure.d/50-heat-config-docker-cmd
 install -p -D -m 755 hot/software-config/elements/heat-config-docker-cmd/install.d/hook-docker-cmd.py %{buildroot}%{_libexecdir}/heat-config/hooks/docker-cmd
 
+# hook to generate json files
+install -p -D -m 755 hot/software-config/elements/heat-config-json-file/install.d/hook-json-file.py %{buildroot}%{_libexecdir}/heat-config/hooks/json-file
+
 %files
 %license LICENSE
 %doc README.rst
@@ -151,5 +154,16 @@ deployments to perform docker based configuration tasks.
 %license LICENSE
 %{_libexecdir}/heat-config/hooks/docker-cmd
 %{_libexecdir}/os-refresh-config/configure.d/50-heat-config-docker-cmd
+
+%package -n python-heat-agent-json-file
+Summary: Agent for dumping data to JSON files
+Requires: python-heat-agent
+
+%description -n python-heat-agent-json-file
+This package installs and configures os-collect-config to allow Heat software
+deployments to generate json files.
+
+%files -n python-heat-agent-json-file
+%{_libexecdir}/heat-config/hooks/json-file
 
 %changelog
