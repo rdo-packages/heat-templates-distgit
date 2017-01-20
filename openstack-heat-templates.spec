@@ -100,7 +100,6 @@ This package installs and configures os-collect-config to allow Heat software
 deployments to perform puppet based configuration tasks.
 
 %files -n python-heat-agent-puppet
-%license LICENSE
 %{_libexecdir}/heat-config/hooks/puppet
 
 %package -n python-heat-agent-ansible
@@ -113,7 +112,6 @@ This package installs and configures os-collect-config to allow Heat software
 deployments to perform ansible based configuration tasks.
 
 %files -n python-heat-agent-ansible
-%license LICENSE
 %{_libexecdir}/heat-config/hooks/ansible
 
 %package -n python-heat-agent-apply-config
@@ -126,7 +124,6 @@ This package installs and configures os-collect-config to allow Heat software
 deployments to perform os-apply-config based configuration tasks.
 
 %files -n python-heat-agent-apply-config
-%license LICENSE
 %{_libexecdir}/heat-config/hooks/apply-config
 
 %package -n python-heat-agent-hiera
@@ -138,7 +135,6 @@ This package installs and configures os-collect-config to allow Heat software
 deployments to perform hiera based configuration tasks.
 
 %files -n python-heat-agent-hiera
-%license LICENSE
 %{_libexecdir}/heat-config/hooks/hiera
 
 %package -n python-heat-agent-docker-cmd
@@ -151,7 +147,6 @@ This package installs and configures os-collect-config to allow Heat software
 deployments to perform docker based configuration tasks.
 
 %files -n python-heat-agent-docker-cmd
-%license LICENSE
 %{_libexecdir}/heat-config/hooks/docker-cmd
 %{_libexecdir}/os-refresh-config/configure.d/50-heat-config-docker-cmd
 
