@@ -70,3 +70,4 @@ deployments to perform script based configuration tasks.
 %{_libexecdir}/heat-config/hooks/script
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/heat-templates/commit/?id=15cf0b6ebb8588428597fa435c7be52ffe30a0d3
