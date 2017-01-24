@@ -153,3 +153,4 @@ deployments to perform docker based configuration tasks.
 %{_libexecdir}/os-refresh-config/configure.d/50-heat-config-docker-cmd
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/heat-templates/commit/?id=15cf0b6ebb8588428597fa435c7be52ffe30a0d3
