@@ -1,12 +1,13 @@
-%global commit b5e110ea90ebdcb75ec4beb954a918fb6d842ca4
+%{!?upstream_version: %global upstream_version %{commit}}
+%global commit 570574906087be436d86efc5af25e61b41189a89
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # DO NOT REMOVE ALPHATAG
 %global alphatag .%{shortcommit}git
 %global project heat-templates
 
 Name: openstack-heat-templates
-Version: XXX
-Release: XXX
+Version: 0.0.1
+Release: 0.1%{alphatag}%{?dist}
 Summary: Heat software config templates and DIB elements
 License: ASL 2.0
 URL: https://github.com/openstack/heat-templates
@@ -167,3 +168,5 @@ deployments to generate json files.
 %{_libexecdir}/heat-config/hooks/json-file
 
 %changelog
+* Fri Feb 17 2017 Alfredo Moralejo <amoralej@redhat.com> 0.0.1-0.1.5705749git
+- Update to pre-release 0.0.1 (570574906087be436d86efc5af25e61b41189a89)
