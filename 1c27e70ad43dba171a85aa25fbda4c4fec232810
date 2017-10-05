@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa81d914_e719b523",
+        "filename": "openstack-heat-templates.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 424
+      },
+      "writtenOn": "2017-10-05T11:34:22Z",
+      "side": 1,
+      "message": "this has been missed",
+      "revId": "1c27e70ad43dba171a85aa25fbda4c4fec232810",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
