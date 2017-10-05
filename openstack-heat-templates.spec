@@ -4,6 +4,9 @@
 %global alphatag .%{shortcommit}git
 %global project heat-templates
 
+%global common_desc \
+This package installs and configures os-collect-config to allow Heat software deployments to perform
+
 Name: openstack-heat-templates
 Version: XXX
 Release: XXX
@@ -77,8 +80,8 @@ Requires: os-refresh-config
 Requires: dib-utils
 
 %description -n python-heat-agent
-This package installs and configures os-collect-config to allow Heat software
-deployments to perform script based configuration tasks.
+%{common_desc}
+script based configuration tasks.
 
 %files -n python-heat-agent
 %license LICENSE
@@ -96,8 +99,8 @@ Requires: python-heat-agent
 Requires: puppet
 
 %description -n python-heat-agent-puppet
-This package installs and configures os-collect-config to allow Heat software
-deployments to perform puppet based configuration tasks.
+%{common_desc}
+puppet based configuration tasks.
 
 %files -n python-heat-agent-puppet
 %license LICENSE
@@ -109,8 +112,8 @@ Requires: python-heat-agent
 Requires: ansible
 
 %description -n python-heat-agent-ansible
-This package installs and configures os-collect-config to allow Heat software
-deployments to perform ansible based configuration tasks.
+%{common_desc}
+ansible based configuration tasks.
 
 %files -n python-heat-agent-ansible
 %license LICENSE
@@ -122,8 +125,8 @@ Requires: python-heat-agent
 Requires: os-apply-config
 
 %description -n python-heat-agent-apply-config
-This package installs and configures os-collect-config to allow Heat software
-deployments to perform os-apply-config based configuration tasks.
+%{common_desc}
+os-apply-config based configuration tasks.
 
 %files -n python-heat-agent-apply-config
 %license LICENSE
@@ -134,8 +137,8 @@ Summary: Agent for performing hiera based Heat software deployments
 Requires: python-heat-agent
 
 %description -n python-heat-agent-hiera
-This package installs and configures os-collect-config to allow Heat software
-deployments to perform hiera based configuration tasks.
+%{common_desc}
+hiera based configuration tasks.
 
 %files -n python-heat-agent-hiera
 %license LICENSE
@@ -147,8 +150,8 @@ Requires: python-heat-agent
 Requires: docker
 
 %description -n python-heat-agent-docker-cmd
-This package installs and configures os-collect-config to allow Heat software
-deployments to perform docker based configuration tasks.
+%{common_desc}
+docker based configuration tasks.
 
 %files -n python-heat-agent-docker-cmd
 %license LICENSE
@@ -160,7 +163,7 @@ Summary: Agent for dumping data to JSON files
 Requires: python-heat-agent
 
 %description -n python-heat-agent-json-file
-This package installs and configures os-collect-config to allow Heat software
+%{common_desc}
 deployments to generate json files.
 
 %files -n python-heat-agent-json-file
