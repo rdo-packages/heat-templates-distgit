@@ -16,6 +16,24 @@
       "revId": "54da5a9488c57c4a4b814da026cc70a37fb2a6a0",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da86d52c_f87dddb2",
+        "filename": "openstack-heat-templates.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2017-11-14T14:40:29Z",
+      "side": 1,
+      "message": "I find it a bit convoluted, but if you look at each subpackage it keeps the initial part as common, and then each one adds a suffix: \"script based ...\", \"puppet based ...\"",
+      "parentUuid": "da86d52c_1dc70314",
+      "revId": "54da5a9488c57c4a4b814da026cc70a37fb2a6a0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
